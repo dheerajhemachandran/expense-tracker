@@ -3,7 +3,7 @@ import React from 'react'
 
 const Card = ({transcation,fetchdata}) => {
   const handledelete=async()=>{
-    const res=await axios.delete(`http://localhost:5000/post/delete/?id=${transcation.id}`)
+    const res=await axios.delete(`https://expense-tracker-f5o7.vercel.app/post/delete/?id=${transcation.id}`)
     fetchdata()
   }
   return (

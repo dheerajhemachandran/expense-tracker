@@ -17,7 +17,7 @@ const Login = () => {
   const handlesubmit=async e=>{
     e.preventDefault()
     try{
-      const res=await axios.post("http://localhost:5000/auth/login",inputs)
+      const res=await axios.post("https://expense-tracker-f5o7.vercel.app/auth/login",inputs)
       localStorage.setItem("key",res.data.key)
       localStorage.setItem("name",res.data.name)
       navigate("/")

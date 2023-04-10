@@ -18,7 +18,7 @@ const Register = () => {
   const handlesubmit=async e=>{
     e.preventDefault()
     try{
-      const res=await axios.post("http://localhost:5000/auth/register",inputs)
+      const res=await axios.post("https://expense-tracker-f5o7.vercel.app/auth/register",inputs)
       navigate("/login")
     }catch(err){
       seterror(err.response.data)

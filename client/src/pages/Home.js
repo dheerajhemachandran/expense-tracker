@@ -29,7 +29,7 @@ const Home = () => {
       type:income?"income":"expense",
       uid:uid
     }
-    const res=await axios.post("http://localhost:5000/post/add",values)
+    const res=await axios.post("https://expense-tracker-f5o7.vercel.app/post/add",values)
     setmessage(res.data)
     fetchdata();
   }
@@ -48,7 +48,7 @@ const Home = () => {
   setincomevalue(ivalue)  
   }
   async function fetchdata(){
-    await axios.get(`http://localhost:5000/post/read/?uid=${uid}`).then((res)=>
+    await axios.get(`https://expense-tracker-f5o7.vercel.app/post/read/?uid=${uid}`).then((res)=>
     updatevalues(res.data))
     }
 
